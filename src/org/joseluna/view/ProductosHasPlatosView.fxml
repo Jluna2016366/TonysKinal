@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="361.0" prefWidth="440.0" style="-fx-background-color: #ffedb6;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.joseluna.controller.ProductosHasPlatosController">
+   <children>
+      <TableView fx:id="tblProductosHasPlatos" layoutX="39.0" layoutY="157.0" onMouseClicked="#seleccionarElemento" prefHeight="190.0" prefWidth="362.0">
+        <columns>
+          <TableColumn fx:id="colcodigoProducto" prefWidth="185.0" text="Codigo Productos" />
+          <TableColumn fx:id="colcodigoPlatos" prefWidth="176.0" text="Codigo Platos " />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="cmbcodigoProducto" layoutX="39.0" layoutY="114.0" prefWidth="150.0" style="-fx-background-color: #61CEB0;" />
+      <ComboBox fx:id="cmbcodigoPlatos" layoutX="248.0" layoutY="114.0" prefWidth="150.0" style="-fx-background-color: #61CEB0;" />
+      <Label layoutX="57.0" layoutY="86.0" text="Codigo Productos">
+         <font>
+            <Font name="Corbel Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="278.0" layoutY="86.0" text="Codigo Platos">
+         <font>
+            <Font name="Corbel Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="21.0" text="Productos Has Platos">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="36.0" fitWidth="69.0" layoutX="5.0" layoutY="11.0">
+         <image>
+            <Image url="@../image/flecha%20HasP.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

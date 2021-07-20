@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#menuPrincipal" prefHeight="431.0" prefWidth="714.0" style="-fx-background-color: #FA0549;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.joseluna.controller.ServiciosController">
+   <children>
+      <Button fx:id="btnNuevo" layoutX="16.0" layoutY="399.0" mnemonicParsing="false" onAction="#nuevo" style="-fx-background-color: #0BFFE0;" text="Nuevo">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="221.0" layoutY="399.0" mnemonicParsing="false" onAction="#editar" style="-fx-background-color: #0BFFE0;" text="Editar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnReportar" layoutX="443.0" layoutY="399.0" mnemonicParsing="false" onAction="#generarReporte" style="-fx-background-color: #0BFFE0;" text="Reporte">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="638.0" layoutY="399.0" mnemonicParsing="false" onAction="#eliminar" style="-fx-background-color: #0BFFE0;" text="Eliminar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="6.0" layoutY="84.0" prefHeight="17.0" prefWidth="99.0" text="Codigo Servicio" textFill="WHITE">
+         <font>
+            <Font name="Corbel Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="6.0" layoutY="120.0" prefHeight="17.0" prefWidth="88.0" text="Fecha Servicio" textFill="WHITE">
+         <font>
+            <Font name="Corbel Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="11.0" layoutY="154.0" text="Tipo Servicio" textFill="WHITE">
+         <font>
+            <Font name="Corbel Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="255.0" layoutY="87.0" text="Hora Servicio" textFill="WHITE">
+         <font>
+            <Font name="Corbel Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="252.0" layoutY="120.0" text="Lugar Servicio" textFill="WHITE">
+         <font>
+            <Font name="Corbel Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="238.0" layoutY="154.0" text="Telefono Contacto" textFill="WHITE">
+         <font>
+            <Font name="Corbel Bold" size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblServicios" layoutX="15.0" layoutY="189.0" onMouseClicked="#seleccionarElemento" prefHeight="200.0" prefWidth="685.0">
+        <columns>
+          <TableColumn fx:id="colCodigoServicio" prefWidth="66.0" text="Codigo S." />
+          <TableColumn fx:id="colFechaServicio" text="Fecha S." />
+            <TableColumn fx:id="colTipoServicio" prefWidth="140.0" text="Tipo S." />
+            <TableColumn fx:id="colHoraServicio" prefWidth="72.0" text="Hora S." />
+            <TableColumn fx:id="colLugarServicio" prefWidth="139.0" text="Lugar S." />
+            <TableColumn fx:id="colTelefonoContacto" prefWidth="88.0" text="Telefono" />
+            <TableColumn fx:id="colCodigoEmpresas" prefWidth="99.0" text="Codigo Empresa" />
+        </columns>
+      </TableView>
+      <Label layoutX="490.0" layoutY="120.0" text="Codigo Empresa" textFill="WHITE">
+         <font>
+            <Font name="Corbel Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="301.0" layoutY="8.0" text="Servicios " textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigoServicio" layoutX="102.0" layoutY="80.0" prefHeight="25.0" prefWidth="119.0" style="-fx-background-color: #0BFFE0;" />
+      <TextField fx:id="txtTipoServicio" layoutX="102.0" layoutY="150.0" prefHeight="25.0" prefWidth="119.0" style="-fx-background-color: #0BFFE0;" />
+      <TextField fx:id="txtHoraServicio" layoutX="357.0" layoutY="83.0" prefHeight="25.0" prefWidth="125.0" style="-fx-background-color: #0BFFE0;" />
+      <TextField fx:id="txtLugarservicio" layoutX="357.0" layoutY="116.0" prefHeight="25.0" prefWidth="125.0" style="-fx-background-color: #0BFFE0;" />
+      <TextField fx:id="txtTelefonoContacto" layoutX="357.0" layoutY="150.0" prefHeight="25.0" prefWidth="125.0" style="-fx-background-color: #0BFFE0;" />
+      <GridPane fx:id="grpFechaServicio" layoutX="102.0" layoutY="113.0" prefHeight="31.0" prefWidth="119.0" style="-fx-background-color: #CCFAFB;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <ComboBox fx:id="cmbCodigoEmpresa" layoutX="595.0" layoutY="116.0" prefHeight="25.0" prefWidth="113.0" style="-fx-background-color: #CCFAFB;" />
+      <ImageView fitHeight="42.0" fitWidth="86.0" layoutX="-1.0" layoutY="8.0" onMouseClicked="#menuPrincipal">
+         <image>
+            <Image url="@../image/flecha%20roja.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

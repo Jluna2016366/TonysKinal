@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Reporte Empresa" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d1fe4c58-ef91-4b19-95c5-c1277210666e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[call sp_listarEmpresas]]>
+	</queryString>
+	<field name="codigoEmpresas" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<title>
+		<band height="80" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="572" height="80" uuid="324af316-8323-44d0-a093-a123c41486bf"/>
+				<imageExpression><![CDATA["C:\\Users\\Luna\\Documents\\NetBeansProjects\\TonysKinal2016366\\src\\org\\joseluna\\image\\Fondo reporte A 1.png"]]></imageExpression>
+			</image>
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="98" height="80" uuid="4d4e340e-840f-41df-86d8-8c87d61ad1cd"/>
+				<imageExpression><![CDATA["C:\\Users\\Luna\\Documents\\NetBeansProjects\\TonysKinal2016366\\src\\org\\joseluna\\image\\Icono Reporte 1.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="175" y="17" width="254" height="50" forecolor="#FFFFFF" uuid="45ca3d5d-edb9-4548-aa63-2c5d4b022f45"/>
+				<textElement textAlignment="Center">
+					<font fontName="Bell MT" size="36" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tonys Kinal ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="226" y="0" width="139" height="18" uuid="08069c92-f591-4cef-aafe-cbbc4f947f5a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Berlin Sans FB Demi" size="15" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Reporte Empresa]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="6" width="111" height="20" uuid="6673ace2-62d9-4428-b7e4-b1c0efc5d141"/>
+				<textElement textAlignment="Center" markup="none">
+					<font fontName="Arial Black" size="11" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Codigo Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="6" width="110" height="20" uuid="db3edd8c-1279-47cd-9b4b-c6f868fd17ee"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Black" size="11"/>
+				</textElement>
+				<text><![CDATA[Nombre Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="365" y="6" width="64" height="20" uuid="5132cb8d-b767-4ce7-85fa-3d75bf1ce532"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Black" size="11"/>
+				</textElement>
+				<text><![CDATA[Dirección]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="494" y="6" width="61" height="20" uuid="b73aebb2-d5d8-4553-b4f8-554174ddd239"/>
+				<textElement textAlignment="Center" markup="none">
+					<font fontName="Arial Black" size="11"/>
+				</textElement>
+				<text><![CDATA[Telefono]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="34" width="569" height="1" uuid="f05521a4-3d0c-42cb-bb1b-a54d11db6a9d"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="48" splitType="Stretch">
+			<textField>
+				<reportElement x="21" y="17" width="100" height="20" uuid="874cbfb7-5944-423b-b91e-caeea522e3b1"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{codigoEmpresas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="17" width="100" height="20" uuid="91e9f115-0781-4e2b-8b97-edb2033dc6eb"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{nombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="365" y="17" width="64" height="20" uuid="63435b2c-bb19-4222-97d2-250df2b00739"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="494" y="17" width="61" height="20" uuid="65533b00-a4b7-4615-a990-60c8d53cdeb5"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="3" y="47" width="569" height="1" uuid="043f10d8-5dcf-4017-a8b4-cc16507a2a90"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="1" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="51" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="572" height="1" uuid="ffe251bb-574a-4cd2-b3a2-8572f7ff01c0"/>
+			</line>
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="1" width="572" height="50" uuid="7b040a00-532f-4b7d-89ac-6383f3e4cd46"/>
+				<imageExpression><![CDATA["C:\\Users\\Luna\\Documents\\NetBeansProjects\\TonysKinal2016366\\src\\org\\joseluna\\image\\Fondo reporte A 1.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="339" y="11" width="230" height="40" forecolor="#FFFFFF" uuid="d79def27-f9a9-43c1-946c-e810bc5b49a1"/>
+				<textElement textAlignment="Center">
+					<font fontName="Eras Light ITC" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[La buena comida saber mejor en compañia de buenos amigos]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

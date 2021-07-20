@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="426.0" prefWidth="602.0" style="-fx-background-color: #435589;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.joseluna.controller.ProductosController">
+   <children>
+      <Button fx:id="btnNuevo" layoutX="26.0" layoutY="387.0" mnemonicParsing="false" onAction="#nuevo" onMouseClicked="#guardar" style="-fx-background-color: #C19A6B;" text="Nuevo">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnEditar" layoutX="175.0" layoutY="387.0" mnemonicParsing="false" onAction="#editar" style="-fx-background-color: #C19A6B;" text="Editar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnEliminar" layoutX="528.0" layoutY="387.0" mnemonicParsing="false" onAction="#eliminar" style="-fx-background-color: #C19A6B;" text="Eliminar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnReportar" layoutX="356.0" layoutY="387.0" mnemonicParsing="false" onAction="#cancelar" style="-fx-background-color: #C19A6B;" text="Reportar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <TableView fx:id="tblProductos" layoutX="24.0" layoutY="181.0" onMouseClicked="#seleccionarElemento" prefHeight="200.0" prefWidth="554.0">
+        <columns>
+          <TableColumn fx:id="colCodigoProducto" prefWidth="152.0" text="Codigo Producto " />
+          <TableColumn fx:id="colNombreProducto" prefWidth="262.0" text="Nombre Producto " />
+            <TableColumn fx:id="colCantidad" prefWidth="139.0" text="Cantidad de Productos" />
+        </columns>
+      </TableView>
+      <Label layoutX="141.0" layoutY="154.0" text="Cantidad " textFill="WHITE">
+         <font>
+            <Font name="Corbel Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="141.0" layoutY="115.0" text="Nombre Producto" textFill="#fcf9f9">
+         <font>
+            <Font name="Corbel Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="141.0" layoutY="78.0" text="Codigo Producto" textFill="WHITE">
+         <font>
+            <Font name="Corbel Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCantidad" layoutX="256.0" layoutY="150.0" prefHeight="25.0" prefWidth="126.0" style="-fx-background-color: #EED09D;" />
+      <TextField fx:id="txtNombreProducto" layoutX="256.0" layoutY="111.0" prefHeight="25.0" prefWidth="179.0" style="-fx-background-color: #EED09D;" />
+      <TextField fx:id="txtCodigoProducto" layoutX="256.0" layoutY="74.0" prefHeight="25.0" prefWidth="126.0" style="-fx-background-color: #EED09D;" />
+      <Label layoutX="224.0" layoutY="14.0" text="Productos" textFill="#fffefe">
+         <font>
+            <Font name="Arial Bold" size="31.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="44.0" fitWidth="85.0" layoutX="7.0" layoutY="6.0" onMouseClicked="#menuPrincipal">
+         <image>
+            <Image url="@../image/60769.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

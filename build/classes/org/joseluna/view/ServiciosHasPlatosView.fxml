@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="334.0" prefWidth="488.0" style="-fx-background-color: #D7A7AA;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.joseluna.controller.ServiciosHasPlatosController">
+   <children>
+      <TableView fx:id="tblServicioshasPlatos" layoutX="9.0" layoutY="161.0" onMouseClicked="#seleccionarElemento" prefHeight="159.0" prefWidth="466.0">
+        <columns>
+          <TableColumn fx:id="colCodigoServicio" prefWidth="231.0" text="Codigo Servicio" />
+            <TableColumn fx:id="colcodigoPlatos" prefWidth="234.0" text="Codigo Platos" />
+        </columns>
+      </TableView>
+      <Label layoutX="77.0" layoutY="86.0" text="Codigo Servicio">
+         <font>
+            <Font name="Corbel Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="330.0" layoutY="86.0" text="Codigo Platos">
+         <font>
+            <Font name="Corbel Bold" size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigoServico" layoutX="53.0" layoutY="111.0" prefWidth="150.0" style="-fx-background-color: #A2CADF;" />
+      <ComboBox fx:id="cmbcodigoPlato" layoutX="300.0" layoutY="111.0" prefWidth="150.0" style="-fx-background-color: #A2CADF;" />
+      <Label layoutX="99.0" layoutY="19.0" text="Servicios Has Platos ">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="47.0" fitWidth="78.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/flecha%20Has.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="53.0" fitWidth="53.0" layoutX="424.0">
+         <image>
+            <Image url="@../image/Casa%20Blanca.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

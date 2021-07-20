@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="479.0" prefWidth="780.0" style="-fx-background-color: #D7DBDD;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.joseluna.controller.EmpleadosController">
+   <children>
+      <TableView fx:id="tblEmpleados" layoutX="10.0" layoutY="253.0" onMouseClicked="#seleccionarEmpelado" prefHeight="170.0" prefWidth="761.0" style="-fx-background-color: #FFFFFF;">
+        <columns>
+          <TableColumn fx:id="colCodigoEmpleado" prefWidth="59.0" text="Codigo E." />
+          <TableColumn fx:id="colNumeroEmpleado" prefWidth="69.0" text="Numero E." />
+            <TableColumn fx:id="colNombreEmpleado" prefWidth="134.0" text="Nombre Empleado." />
+            <TableColumn fx:id="colApellidoEmpleado" prefWidth="149.0" text="Apellido Empleado" />
+            <TableColumn fx:id="colDireccion" prefWidth="130.0" text="Direccion E." />
+            <TableColumn fx:id="colTelefono" prefWidth="60.0" text="Telefono " />
+            <TableColumn fx:id="colGradoCocinero" prefWidth="91.0" text="Grado Co." />
+            <TableColumn fx:id="colCodigoTipoEmpleado" prefWidth="68.0" text="Codigo T.E." />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="14.0" layoutY="435.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="36.0" prefWidth="79.0" style="-fx-background-color: #85C1E9;" text="Nuevo">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="231.0" layoutY="435.0" mnemonicParsing="false" onAction="#editar" prefHeight="36.0" prefWidth="79.0" style="-fx-background-color: #85C1E9;" text="Editar">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnReporte" layoutX="480.0" layoutY="435.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="79.0" style="-fx-background-color: #85C1E9;" text="Reporte">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="687.0" layoutY="435.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="36.0" prefWidth="79.0" style="-fx-background-color: #85C1E9;" text="Eliminar">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="46.0" layoutY="96.0" prefHeight="20.0" prefWidth="117.0" text="Codigo Empleado">
+         <font>
+            <Font name="Corbel Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="135.0" prefHeight="20.0" prefWidth="117.0" text="Numero Empleado">
+         <font>
+            <Font name="Corbel Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigoEmpleado" editable="false" layoutX="185.0" layoutY="93.0" style="-fx-background-color: #AED6F1;" />
+      <Label layoutX="46.0" layoutY="215.0" text="Apellido Empleado">
+         <font>
+            <Font name="Corbel Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="171.0" text="Nombre Empleado">
+         <font>
+            <Font name="Corbel Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="418.0" layoutY="214.0" text="Codigo Tipo Empleado">
+         <font>
+            <Font name="Corbel Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="415.0" layoutY="95.0" text="Direccion Empleado">
+         <font>
+            <Font name="Corbel Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="421.0" layoutY="135.0" text="Telefono Contacto ">
+         <font>
+            <Font name="Corbel Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="418.0" layoutY="171.0" text="Grado Cocinero">
+         <font>
+            <Font name="Corbel Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNumeroEmpleado" editable="false" layoutX="185.0" layoutY="133.0" style="-fx-background-color: #AED6F1;" />
+      <TextField fx:id="txtNombreEmpleado" editable="false" layoutX="185.0" layoutY="169.0" style="-fx-background-color: #AED6F1;" />
+      <TextField fx:id="txtApellidoEmpleado" editable="false" layoutX="185.0" layoutY="212.0" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #AED6F1;" />
+      <TextField fx:id="txtDireccion" editable="false" layoutX="577.0" layoutY="92.0" style="-fx-background-color: #AED6F1;" />
+      <TextField fx:id="txtTelefono" editable="false" layoutX="577.0" layoutY="133.0" style="-fx-background-color: #AED6F1;" />
+      <TextField fx:id="txtGradoCocinero" editable="false" layoutX="577.0" layoutY="169.0" style="-fx-background-color: #AED6F1;" />
+      <Label layoutX="342.0" layoutY="6.0" prefHeight="36.0" prefWidth="163.0" text="Empleados">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigoTipoEmpleado" layoutX="577.0" layoutY="212.0" prefWidth="150.0" style="-fx-background-color: #85C1E9;" />
+      <ImageView fitHeight="51.0" fitWidth="79.0" layoutY="14.0" onMouseClicked="#ventanaTipoEmpelado" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/flecha%20gris.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #85C1E9;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.joseluna.controller.DatosPersonalesController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="248.0" style="-fx-background-color: #F8C471;">
+         <children>
+            <Button layoutX="28.0" layoutY="246.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="193.0" text="Programador " />
+            <Button layoutX="28.0" layoutY="317.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="193.0" text="Administracion " />
+            <Label layoutX="43.0" layoutY="153.0" prefHeight="64.0" prefWidth="162.0" text="Tony's Kinal ">
+               <font>
+                  <Font name="Arial Bold" size="25.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="68.0" prefHeight="143.0" prefWidth="125.0">
+               <children>
+                  <ImageView fitHeight="143.0" fitWidth="98.0" layoutY="25.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/20200723_215121.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Label layoutX="382.0" layoutY="86.0" prefHeight="64.0" prefWidth="106.0" text="Datos ">
+         <font>
+            <Font name="Arial Bold" size="33.0" />
+         </font>
+      </Label>
+      <Label layoutX="396.0" layoutY="191.0" text="Jose Luis ">
+         <font>
+            <Font name="Corbel Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="400.0" layoutY="237.0" text="Luna Coj">
+         <font>
+            <Font name="Corbel Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="402.0" layoutY="281.0" text="IN5AM">
+         <font>
+            <Font name="Corbel Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="394.0" layoutY="321.0" text="2016-366">
+         <font>
+            <Font name="Corbel Bold" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="44.0" fitWidth="87.0" layoutX="507.0" layoutY="14.0" onMouseClicked="#menuPrincipal">
+         <image>
+            <Image url="@../image/flecha%20datos.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

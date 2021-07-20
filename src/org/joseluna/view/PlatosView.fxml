@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="670.0" style="-fx-background-color: #273746;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.joseluna.controller.PlatosController">
+   <children>
+      <Label layoutX="14.0" layoutY="119.0" text="Codigo Platos" textFill="WHITE">
+         <font>
+            <Font name="Corbel Bold" size="13.0" />
+         </font></Label>
+      <TextField fx:id="txtCodigoPlatos" layoutX="100.0" layoutY="115.0" style="-fx-background-color: #CCD1D1;" />
+      <TextField fx:id="txtCantidad" layoutX="100.0" layoutY="147.0" style="-fx-background-color: #CCD1D1;" />
+      <TextField fx:id="txtNombrePlato" layoutX="100.0" layoutY="179.0" style="-fx-background-color: #CCD1D1;" />
+      <TextField fx:id="txtPrecio" layoutX="501.0" layoutY="147.0" style="-fx-background-color: #CCD1D1;" />
+      <TextField fx:id="txtDescripcion" layoutX="501.0" layoutY="115.0" style="-fx-background-color: #CCD1D1;" />
+      <ComboBox fx:id="cmbCodigotipoPlato" layoutX="500.0" layoutY="179.0" prefWidth="150.0" style="-fx-background-color: #CCD1D1;" />
+      <Label layoutX="26.0" layoutY="151.0" text="Cantidad" textFill="WHITE">
+         <font>
+            <Font name="Corbel Bold" size="13.0" />
+         </font></Label>
+      <Label layoutX="14.0" layoutY="183.0" text="Nombre Plato" textFill="WHITE">
+         <font>
+            <Font name="Corbel Bold" size="13.0" />
+         </font></Label>
+      <Label layoutX="392.0" layoutY="119.0" text="Descripcion Plato" textFill="WHITE">
+         <font>
+            <Font name="Corbel Bold" size="13.0" />
+         </font></Label>
+      <Label layoutX="407.0" layoutY="151.0" text="Precio Plato" textFill="WHITE">
+         <font>
+            <Font name="Corbel Bold" size="13.0" />
+         </font></Label>
+      <Label fx:id="cmbCodigoTipoPlatos" layoutX="390.0" layoutY="183.0" text="CodigoTipoPlatos" textFill="WHITE">
+         <font>
+            <Font name="Corbel Bold" size="13.0" />
+         </font></Label>
+      <TableView fx:id="tblPlatos" layoutX="14.0" layoutY="214.0" onMouseClicked="#seleccionarElemento" prefHeight="184.0" prefWidth="642.0">
+        <columns>
+          <TableColumn fx:id="colcodigoPlatos" prefWidth="69.0" text="Cod. Platos" />
+          <TableColumn fx:id="colCantidad" prefWidth="57.0" text="Cantidad" />
+            <TableColumn fx:id="colNombrePlato" prefWidth="125.0" text="Nom. Plato" />
+            <TableColumn fx:id="colDescripcionPlato" prefWidth="216.0" text="Descripcion Plato" />
+            <TableColumn fx:id="colPrecioPlato" prefWidth="77.0" text="Precio Plato" />
+            <TableColumn fx:id="colCodigoTipoPlatos" prefWidth="97.0" text="Cod. Tipo Platos" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="41.0" layoutY="410.0" mnemonicParsing="false" style="-fx-background-color: #616A6B;" text="Nuevo" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnEditar" layoutX="216.0" layoutY="410.0" mnemonicParsing="false" style="-fx-background-color: #616A6B;" text="Editar" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnReporte" layoutX="390.0" layoutY="410.0" mnemonicParsing="false" style="-fx-background-color: #616A6B;" text="Reporte" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnEliminar" layoutX="575.0" layoutY="410.0" mnemonicParsing="false" style="-fx-background-color: #616A6B;" text="Eliminar" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Label layoutX="278.0" layoutY="29.0" text="Platos" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="36.0" />
+         </font></Label>
+      <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="593.0" layoutY="10.0">
+         <image>
+            <Image url="@../image/Casa%20Blanca.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="90.0" layoutX="7.0" layoutY="10.0" onMouseClicked="#ventanaTipoPlato">
+         <image>
+            <Image url="@../image/flecha%20azul%202.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

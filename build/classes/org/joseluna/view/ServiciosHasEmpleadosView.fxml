@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="415.0" prefWidth="636.0" style="-fx-background-color: #8AFAFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.joseluna.controller.ServiciosHasEmpleadosController">
+   <children>
+      <TableView fx:id="tblServiciohasEmpleado" layoutX="14.0" layoutY="196.0" onMouseClicked="#seleccionarElemento" prefHeight="174.0" prefWidth="609.0">
+        <columns>
+          <TableColumn fx:id="colCodigoServicioshasEmpleado" prefWidth="73.0" text="Codigo SHE" />
+          <TableColumn fx:id="colFechaEvento" prefWidth="91.0" text="Fecha Evento" />
+            <TableColumn fx:id="colHoraEvento" text="Hora Evento" />
+            <TableColumn fx:id="colLugarEvento" prefWidth="162.0" text="Lugar Evento" />
+            <TableColumn fx:id="colCodigoServicio" prefWidth="93.0" text="Codigo Servicio" />
+            <TableColumn fx:id="colCodigoEmpleado" prefWidth="109.0" text="Codigo Empleado" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="14.0" layoutY="380.0" mnemonicParsing="false" onAction="#nuevo" onMouseClicked="#guardar" style="-fx-background-color: #C000FF;" text="Nuevo" />
+      <Button fx:id="btnEliminar" layoutX="570.0" layoutY="380.0" mnemonicParsing="false" onAction="#eliminar" style="-fx-background-color: #C000FF;" text="Eliminar" />
+      <Button fx:id="btnReportar" layoutX="367.0" layoutY="380.0" mnemonicParsing="false" onAction="#cancelar" style="-fx-background-color: #C000FF;" text="Reporte" />
+      <Button fx:id="btnEditar" layoutX="169.0" layoutY="380.0" mnemonicParsing="false" onAction="#editar" style="-fx-background-color: #C000FF;" text="Editar" />
+      <Label layoutX="18.0" layoutY="169.0" text="Hora Evento">
+         <font>
+            <Font name="Corbel Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="130.0" text="Fecha Evento">
+         <font>
+            <Font name="Corbel Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="94.0" text="Codigo SHE">
+         <font>
+            <Font name="Corbel Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtHoraEvento" layoutX="121.0" layoutY="165.0" style="-fx-background-color: #FE52FF;" />
+      <ComboBox fx:id="cmbCodigoEmpleado" layoutX="473.0" layoutY="165.0" prefWidth="150.0" style="-fx-background-color: #C000FF;" />
+      <TextField fx:id="txtCodigoServicioshasEmpleado" layoutX="121.0" layoutY="90.0" style="-fx-background-color: #FE52FF;" />
+      <Label layoutX="353.0" layoutY="169.0" text="Codigo Empleado">
+         <font>
+            <Font name="Corbel Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="360.0" layoutY="130.0" text="Codigo Servicio">
+         <font>
+            <Font name="Corbel Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="367.0" layoutY="94.0" text="Lugar Evento">
+         <font>
+            <Font name="Corbel Bold" size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigoServicio" layoutX="473.0" layoutY="127.0" prefWidth="150.0" style="-fx-background-color: #C000FF;" />
+      <TextField fx:id="txtLugarEvento" layoutX="474.0" layoutY="90.0" style="-fx-background-color: #FE52FF;" />
+      <Label layoutX="146.0" layoutY="22.0" text="Servicios Has Empleados">
+         <font>
+            <Font name="Arial Bold" size="33.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="38.0" fitWidth="77.0" layoutX="1.0" layoutY="14.0">
+         <image>
+            <Image url="@../image/flecha%20HasEM.png" />
+         </image>
+      </ImageView>
+      <GridPane fx:id="grpFechaEvento" layoutX="118.0" layoutY="125.0" prefHeight="30.0" prefWidth="149.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+   </children>
+</AnchorPane>

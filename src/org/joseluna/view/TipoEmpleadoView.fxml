@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #7CCCFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.joseluna.controller.TipoEmpleadoController">
+   <children>
+      <TextField fx:id="txtCodigoTipoEmpleado" editable="false" layoutX="306.0" layoutY="84.0" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #FFFFFF;" />
+      <TextField fx:id="txtDescripcion" editable="false" layoutX="306.0" layoutY="124.0" style="-fx-background-color: #FFFFFF;" />
+      <Label layoutX="141.0" layoutY="87.0" text="Codigo Tipo Empleado">
+         <font>
+            <Font name="Corbel Bold" size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnNuevo" layoutX="38.0" layoutY="355.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #ECECEC;" text="Nuevo">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Button fx:id="btnEditar" layoutX="127.0" layoutY="355.0" mnemonicParsing="false" onAction="#editar" prefHeight="29.0" prefWidth="79.0" style="-fx-background-color: #ECECEC;" text="Editar">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Button fx:id="btnReportar" layoutX="221.0" layoutY="355.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #ECECEC;" text="Reporte">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Button fx:id="btnEliminar" layoutX="314.0" layoutY="355.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="29.0" prefWidth="79.0" style="-fx-background-color: #ECECEC;" text="Eliminar">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Button layoutX="462.0" layoutY="355.0" mnemonicParsing="false" onAction="#ventanaEmpleado" prefHeight="29.0" prefWidth="100.0" style="-fx-background-color: #ECECEC;" text="Empleados">
+         <effect>
+            <DisplacementMap>
+               <mapData>
+                  <FloatMap />
+               </mapData>
+            </DisplacementMap>
+         </effect>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tblEmpleados" layoutX="38.0" layoutY="166.0" onMouseClicked="#seleccionarElemento" prefHeight="171.0" prefWidth="524.0" style="-fx-background-color: #FFFFFF;">
+        <columns>
+          <TableColumn fx:id="colCodigoTipoEmpleado" prefWidth="92.0" text="Codigo" />
+          <TableColumn fx:id="colDescripcion" prefWidth="431.0" text="Descripcion" />
+        </columns>
+      </TableView>
+      <Label layoutX="177.0" layoutY="128.0" text="Descripcion">
+         <font>
+            <Font name="Corbel Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="206.0" layoutY="14.0" text="Tipo Empleado">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="48.0" fitWidth="100.0" layoutY="14.0" onMouseClicked="#menuPrincipal">
+         <image>
+            <Image url="@../image/celeste%20claro.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
